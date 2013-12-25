@@ -37,7 +37,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\APIS\CHILKAT\include;C:\APIS\JSON\include;C:\APIS\BOOST;C:\APIS\GLUT\include\GL;C:\APIS\LUA\include;C:\APIS\SDL\include;C:\APIS\CRYPTO++\;C:\APIS\OGRE\OgreSDK_vc10_v1-8-1\include\OIS;C:\APIS\OGRE\OgreSDK_vc10_v1-8-1\include\OGRE;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -53,9 +55,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,10 +71,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Wrench.cpp" />
+    <ClCompile Include="Wrench_Logging.cpp" />
+    <ClCompile Include="Wrench_Memory.cpp" />
+    <ClCompile Include="Wrench_Shellcode.cpp" />
+    <ClCompile Include="Wrench_Thread.cpp" />
     <ClCompile Include="Wrench_Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wrench.h" />
+    <ClInclude Include="Wrench_Logging.h" />
+    <ClInclude Include="Wrench_Memory.h" />
+    <ClInclude Include="Wrench_Shellcode.h" />
+    <ClInclude Include="Wrench_Thread.h" />
+    <ClInclude Include="Wrench_ThreadController.h" />
     <ClInclude Include="Wrench_Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

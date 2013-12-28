@@ -15,7 +15,7 @@ Enjoy!
 
 Documentation:
 
-Objects:
+	Objects:
 	Name: WClock
 	File: Wrench_Timer.h
 	Type: Class
@@ -71,7 +71,7 @@ Objects:
 		InitializeWrenchNet(con, AF_INET, SOCK_STREAM);
 	 
 	 
-Functions:
+	Functions:
 	Name: Print
 	File: Wrench_Logging.h
 	Formal Name(s):

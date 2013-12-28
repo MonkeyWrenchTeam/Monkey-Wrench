@@ -9,36 +9,11 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Header Files\Wrench_GL">
-      <UniqueIdentifier>{3a6dabd9-b95b-42e9-9c32-2b679e4a3233}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Wrench_Manipulation">
-      <UniqueIdentifier>{e3c6a0ff-15c7-4dc1-beaf-2e4c0372ef4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Wrench_Maps">
-      <UniqueIdentifier>{b90ff340-9632-4771-a4f7-24f5335fd73c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Wrench_Time">
       <UniqueIdentifier>{cde5f853-4d08-4af6-a0b5-2b685e1b3893}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Wrench_Time">
       <UniqueIdentifier>{ec421b8c-8583-499e-9db7-7eeaffdf8939}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Wrench_Threads">
-      <UniqueIdentifier>{6366bb47-35bc-4f8b-a60a-c24efdd210a6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Wrench_GL">
-      <UniqueIdentifier>{d68c77b8-e1bc-40a2-b3d6-0a8cb83cc1ae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Wrench_Maps">
-      <UniqueIdentifier>{7fc3447b-5118-4780-a0d8-bfeb64e776ef}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Wrench_Graphics">
-      <UniqueIdentifier>{4aa88af2-9fd4-4461-9943-4418a6756fba}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Wrench_Memory">
       <UniqueIdentifier>{58180306-3209-4308-a0ab-bbd7e99fe446}</UniqueIdentifier>
@@ -64,6 +39,16 @@
     <Filter Include="Source Files\Wrench_Shellcode">
       <UniqueIdentifier>{3a293fdd-6997-4724-9ccb-803973e4a5f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Wrench_Net">
+      <UniqueIdentifier>{acc82338-be39-43c9-b0fd-edf452bddfae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Wrench_Net">
+      <UniqueIdentifier>{e7b7a6f1-dc03-492f-9c88-e83c66be73f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Wrench.cpp">
@@ -84,6 +69,9 @@
     <ClCompile Include="Wrench_Shellcode.cpp">
       <Filter>Source Files\Wrench_Shellcode</Filter>
     </ClCompile>
+    <ClCompile Include="Wrench_Net.cpp">
+      <Filter>Source Files\Wrench_Net</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Wrench.h">
@@ -101,11 +89,11 @@
     <ClInclude Include="Wrench_Thread.h">
       <Filter>Header Files\Wrench_Threading</Filter>
     </ClInclude>
-    <ClInclude Include="Wrench_ThreadController.h">
-      <Filter>Header Files\Wrench_Threading</Filter>
-    </ClInclude>
     <ClInclude Include="Wrench_Shellcode.h">
       <Filter>Header Files\Wrench_Shellcode</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench_Net.h">
+      <Filter>Header Files\Wrench_Net</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

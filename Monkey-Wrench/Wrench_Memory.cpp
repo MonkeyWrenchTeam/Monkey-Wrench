@@ -61,14 +61,4 @@ namespace Wrench
 
 		return nt;
 	}
-
-	WSMem* FormatMemory(void* memory, char* type)
-	{
-		WSMem* _a = new WSMem;
-		_a->mem = memory;
-		_a->type = type;
-		return _a;
-	}
-
-
 }

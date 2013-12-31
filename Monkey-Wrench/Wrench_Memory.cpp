@@ -2,8 +2,10 @@
 
 namespace Wrench
 {
+    #ifdef WRENCH_WINDOWS
 	int ModifyMemory( char* Window, unsigned long Pointer, WPVOID Val )
 	{
+
 		HWND hWnd = FindWindowA(0, Window);
 		if(hWnd == 0)
 			return 1;// Can't find Window
@@ -50,7 +52,7 @@ namespace Wrench
 
 		LPVOID Buffer;
 		ReadProcessMemory(hProc, (LPVOID)Pointer, &Buffer, sizeof(Buffer), NULL);
-		
+
 		WThread nt;
 		void** arglist = new void*[3];
 		arglist [0] = Window;
@@ -61,4 +63,18 @@ namespace Wrench
 
 		return nt;
 	}
+
+
+	#else
+
+    WRENCHLIB_API int ModifyMemory(pid_t Window, WPVOID Pointer, WPVOID Val)
+    {
+        return ptrace(PTRACE_POKEDATA, Window, Pointer, Val);
+    }
+
+	WRENCHLIB_API WThread FreezeMemory(pid_t Window, WPVOID Pointer)
+	{
+	}
+
+	#endif
 }

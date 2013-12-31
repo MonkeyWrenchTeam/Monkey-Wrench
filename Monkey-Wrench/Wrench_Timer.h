@@ -15,13 +15,24 @@ public:
 	 int GetTimeHours();
 	 int GetDay();
 	 int GetYear();
-	 char* GetMonth();
 	 void PullTime();
+
+     #ifdef WRENCH_WINDOWS
+        char* GetMonth();
+     #else
+        int GetMonth();
+     #endif
 
 private:
 	time_t _time;
 
-	char* Month;
+    //In the Windows version, the month is represented as the name of the month.
+    //However, using POSIX, localtime gives the number of the month (1-12)
+    #ifdef WRENCH_WINDOWS
+        char* Month;
+	#else
+        int Month;
+	#endif
 	int Year;
 	int Seconds;
 	int Minutes;

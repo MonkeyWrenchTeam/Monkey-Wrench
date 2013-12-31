@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1388350404 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench.cpp
+
+1388361634 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Logging.cpp
+	"Wrench_Logging.h"
+	<fstream>
+
+1388360851 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Logging.h
+	<Windows.h>
+	"Wrench.h"
+
+1388468102 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench.h
+	<time.h>
+	<iostream>
+	<Windows.h>
+
+1388370680 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Memory.cpp
+	"Wrench_Memory.h"
+
+1388370574 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Memory.h
+	"Wrench.h"
+	"Wrench_Thread.h"
+	<Windows.h>
+	<sys/ptrace.h>
+
+1388388338 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Thread.h
+	"Wrench.h"
+	<process.h>
+	<pthread.h>
+
+1388370735 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Net.cpp
+	"Wrench_Net.h"
+
+1388370708 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Net.h
+	"Wrench.h"
+	<map>
+	<queue>
+	<string>
+	<Windows.h>
+
+1388370767 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Shellcode.cpp
+	"Wrench_Shellcode.h"
+
+1388370767 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Shellcode.h
+	"Wrench.h"
+
+1388371632 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Thread.cpp
+	"Wrench_Thread.h"
+
+1388467877 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Timer.cpp
+	"Wrench_Timer.h"
+	"Wrench_Manipulation.h"
+	<string.h>
+
+1388468836 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Timer.h
+	"Wrench.h"
+
+1388451579 source:/home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Manipulation.cpp
+	<Wrench.h>
+	<map>
+	<string>
+	<sstream>
+	<cstring>
+	<math.h>
+
+1388450861 /home/inferno/git/Monkey-Wrench/Monkey-Wrench/Wrench_Manipulation.h
+	"Wrench.h"
+	<map>
+	<string>
+	<sstream>
+

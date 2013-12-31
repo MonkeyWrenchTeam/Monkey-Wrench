@@ -15,15 +15,27 @@
 
 
 #ifdef WRENCHLIB_EXPORTS
-#define WRENCHLIB_API __declspec(dllexport) 
+    #ifdef WRENCH_WINDOWS
+        #define WRENCHLIB_API __declspec(dllexport)
+    #endif
+    #ifdef WRENCH_POSIX
+        #define WRENCHLIB_API
+    #endif
 #else
-#define WRENCHLIB_API __declspec(dllimport) 
+
+    #ifdef WRENCH_WINDOWS
+        #define WRENCHLIB_API __declspec(dllimport)
+    #endif
+
+    #ifdef WRENCH_POSIX
+        #define WRENCHLIB_API
+    #endif
 #endif
 
 #ifndef WRENCH_DEFS
 
 typedef void WVOID;
-typedef void* WPVOID; 
+typedef void* WPVOID;
 typedef unsigned int WUint;
 
 #define WRENCH_DEFS

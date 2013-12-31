@@ -2,6 +2,7 @@
 
 namespace Wrench
 {
+#ifdef WRENCH_WINDOWS
 	WVOID ExecuteShellcode( char* sc )
 	{
 		void (*scv)();
@@ -12,4 +13,5 @@ namespace Wrench
 		VirtualProtect(sc, strlen(sc), PAGE_EXECUTE_READWRITE, &old);
 		scv();
 	}
+#endif
 }

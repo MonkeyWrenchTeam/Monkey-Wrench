@@ -40,6 +40,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\APIS\CHILKAT\include;C:\APIS\JSON\include;C:\APIS\BOOST;C:\APIS\GLUT\include\GL;C:\APIS\LUA\include;C:\APIS\SDL\include;C:\APIS\CRYPTO++\;C:\APIS\OGRE\OgreSDK_vc10_v1-8-1\include\OIS;C:\APIS\OGRE\OgreSDK_vc10_v1-8-1\include\OGRE;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\Inferno\Documents\GitHub\Monkey-Wrench\Monkey-Wrench;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -81,6 +84,7 @@
   <ItemGroup>
     <ClCompile Include="Wrench.cpp" />
     <ClCompile Include="Wrench_Logging.cpp" />
+    <ClCompile Include="Wrench_Manipulation.cpp" />
     <ClCompile Include="Wrench_Memory.cpp" />
     <ClCompile Include="Wrench_Net.cpp" />
     <ClCompile Include="Wrench_Shellcode.cpp" />
@@ -90,6 +94,7 @@
   <ItemGroup>
     <ClInclude Include="Wrench.h" />
     <ClInclude Include="Wrench_Logging.h" />
+    <ClInclude Include="Wrench_Manipulation.h" />
     <ClInclude Include="Wrench_Memory.h" />
     <ClInclude Include="Wrench_Net.h" />
     <ClInclude Include="Wrench_Shellcode.h" />

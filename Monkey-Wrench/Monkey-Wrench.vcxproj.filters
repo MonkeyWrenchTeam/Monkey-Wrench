@@ -49,6 +49,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Wrench_Manipulation">
+      <UniqueIdentifier>{2465ad60-601c-4d21-9029-1ac41ca6dfc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Wrench_Manipulation">
+      <UniqueIdentifier>{e9362195-8131-4a4e-9ff2-4c4f527b8171}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Wrench.cpp">
@@ -72,11 +78,11 @@
     <ClCompile Include="Wrench_Net.cpp">
       <Filter>Source Files\Wrench_Net</Filter>
     </ClCompile>
+    <ClCompile Include="Wrench_Manipulation.cpp">
+      <Filter>Source Files\Wrench_Manipulation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Wrench.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Wrench_Timer.h">
       <Filter>Header Files\Wrench_Time</Filter>
     </ClInclude>
@@ -94,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="Wrench_Net.h">
       <Filter>Header Files\Wrench_Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench_Manipulation.h">
+      <Filter>Header Files\Wrench_Manipulation</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

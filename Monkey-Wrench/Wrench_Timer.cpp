@@ -68,7 +68,7 @@ int WClock::GetYear()
 
 void WClock::PullTime()
 {
-
+	#ifdef WRENCH_POSIX
 	_time = time(NULL);
 	struct tm tm = *localtime(&_time);
 	Year = tm.tm_year + 1900;
@@ -77,6 +77,7 @@ void WClock::PullTime()
 	Hours = tm.tm_hour;
 	Minutes = tm.tm_min;
 	Seconds = tm.tm_sec;
+	#endif
 
 	#ifdef WRENCH_WINDOWS
 	char* nCount = ctime(&_time);

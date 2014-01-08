@@ -3,7 +3,7 @@
 
 #include "Wrench.h"
 
-#ifdef WIN32
+#ifdef WRENCH_WINDOWS
     #include <process.h>
 #else
     #include <pthread.h>
@@ -34,8 +34,8 @@ struct WThread
 WRENCHLIB_API WThread MakeThread(WPVOID Function);
 WRENCHLIB_API WThread MakeThread( WPVOID Function, WPVOID args );
 #else
-WRENCHLIB_API WThread MakeThread(void*(*func)(void *));
-WRENCHLIB_API WThread MakeThread(void*(*func)(void *), WPVOID args );
+WRENCHLIB_API WThread MakeThread(void* func);
+WRENCHLIB_API WThread MakeThread(void* func, WPVOID args);
 #endif
 
 

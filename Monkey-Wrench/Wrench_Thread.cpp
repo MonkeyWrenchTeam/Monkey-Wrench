@@ -18,17 +18,16 @@ WThread MakeThread( WPVOID Function, WPVOID args )
 }
 #else
 
-WThread MakeThread(void*(*func)(void *))
+WThread MakeThread(void* func)
 {
     Wrench::WThread nt;
-    nt.ThreadID = pthread_create(&nt.ThreadHandle, NULL, func, NULL);
+    nt.ThreadID = pthread_create(&nt.ThreadHandle, NULL, (void*(*)(void*))func, NULL);
     return nt;
 }
-
-WThread MakeThread( void*(*func)(void *), WPVOID args )
+WThread MakeThread(void* func, WPVOID args)
 {
     Wrench::WThread nt;
-    nt.ThreadID = pthread_create(&nt.ThreadHandle, NULL, func, args);
+    nt.ThreadID = pthread_create(&nt.ThreadHandle, NULL, (void*(*)(void*))func, args);
     return nt;
 }
 #endif

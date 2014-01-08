@@ -1,0 +1,8 @@
+/Wrench.o
+/Wrench_Logging.o
+/Wrench_Manipulation.o
+/Wrench_Memory.o
+/Wrench_Net.o
+/Wrench_Shellcode.o
+/Wrench_Thread.o
+/Wrench_Timer.o

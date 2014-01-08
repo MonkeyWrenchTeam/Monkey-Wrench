@@ -29,16 +29,8 @@ struct WThread
 };
 #endif
 
-
-#ifdef WRENCH_WINDOWS
 WRENCHLIB_API WThread MakeThread(WPVOID Function);
 WRENCHLIB_API WThread MakeThread( WPVOID Function, WPVOID args );
-#else
-WRENCHLIB_API WThread MakeThread(void* func);
-WRENCHLIB_API WThread MakeThread(void* func, WPVOID args);
-#endif
-
-
 
 }
 

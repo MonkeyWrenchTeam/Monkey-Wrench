@@ -9,7 +9,7 @@
 
 #ifdef WRENCH_WINDOWS
 #include <Windows.h>
-#pragma comment(lib, "ws2_32.lib)
+#pragma comment(lib, "ws2_32.lib")
 
 #endif
 

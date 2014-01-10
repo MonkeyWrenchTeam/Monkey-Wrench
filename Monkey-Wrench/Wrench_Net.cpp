@@ -58,7 +58,7 @@ namespace Wrench
 		#ifdef WRENCH_WINDOWS
         sAddr.sin_addr.S_un.S_addr = INADDR_ANY;
 		//Create the socket
-		int hSockInit = bind(con->Local, (SOCKADDR*)&sAddr, sizeof(sAddr));
+		int hSockInit = bind(con->Local, (struct sockaddr*)&sAddr, sizeof(sAddr));
 		#else
         sAddr.sin_addr.s_addr = INADDR_ANY;
 		int hSockInit = bind(con->Local, (struct sockaddr*)&sAddr, sizeof(sAddr));
@@ -235,7 +235,8 @@ namespace Wrench
             if(con->_ket == true) //Kill established thread
             {
                 con->_ket = false;
-                pthread_exit(0);
+
+				break;
             }
 
             #ifdef WRENCH_WINDOWS
@@ -256,6 +257,13 @@ namespace Wrench
 				con->Messages.push((char*)msg->c_str());
 			}
 		}
+
+		Send("Disconnecting.", con);
+		#ifdef WRENCH_WINDOWS
+			ExitThread(0);
+		#else
+			pthread_exit(0);
+		#endif
 	}
 
 	WVOID Send( char* data, WConnectionInformation* con )

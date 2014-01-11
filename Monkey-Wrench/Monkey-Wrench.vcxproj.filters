@@ -75,11 +75,11 @@
     <ClCompile Include="Wrench_Shellcode.cpp">
       <Filter>Source Files\Wrench_Shellcode</Filter>
     </ClCompile>
-    <ClCompile Include="Wrench_Net.cpp">
-      <Filter>Source Files\Wrench_Net</Filter>
-    </ClCompile>
     <ClCompile Include="Wrench_Manipulation.cpp">
       <Filter>Source Files\Wrench_Manipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrench_Net.cpp">
+      <Filter>Source Files\Wrench_Net</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,14 +98,14 @@
     <ClInclude Include="Wrench_Shellcode.h">
       <Filter>Header Files\Wrench_Shellcode</Filter>
     </ClInclude>
-    <ClInclude Include="Wrench_Net.h">
-      <Filter>Header Files\Wrench_Net</Filter>
-    </ClInclude>
     <ClInclude Include="Wrench_Manipulation.h">
       <Filter>Header Files\Wrench_Manipulation</Filter>
     </ClInclude>
     <ClInclude Include="Wrench.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench_Net.h">
+      <Filter>Header Files\Wrench_Net</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

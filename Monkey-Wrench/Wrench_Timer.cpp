@@ -9,11 +9,9 @@ namespace Wrench
 WClock::WClock()
 {
 	Year = Day = Hours = Minutes = Seconds = 0; //Prevent errors when pulling the time.
-	#ifdef WRENCH_WINDOWS
-	Month = "";
-	#else
+
 	Month = 0;
-	#endif
+	
 }
 
 int WClock::GetTimeHours()
@@ -46,19 +44,13 @@ int WClock::GetDay()
 	return Day;
 }
 
-#ifdef WRENCH_WINDOWS
-char* WClock::GetMonth()
-{
-	PullTime();
-	return Month;
-}
-#else
+
 int WClock::GetMonth()
 {
 	PullTime();
 	return Month;
 }
-#endif
+
 
 int WClock::GetYear()
 {
@@ -68,7 +60,7 @@ int WClock::GetYear()
 
 void WClock::PullTime()
 {
-	#ifdef WRENCH_POSIX
+	
 	_time = time(NULL);
 	struct tm tm = *localtime(&_time);
 	Year = tm.tm_year + 1900;
@@ -77,29 +69,29 @@ void WClock::PullTime()
 	Hours = tm.tm_hour;
 	Minutes = tm.tm_min;
 	Seconds = tm.tm_sec;
-	#endif
-
-	#ifdef WRENCH_WINDOWS
-	char* nCount = ctime(&_time);
-
-	char* vars[7];
-
-	int i = 0;
-	char * pch = strtok(nCount," :");
-	while ( pch != NULL)
-	{
-		vars[i] = pch;
-		++i;
-		pch = strtok(NULL," :");
-	}
-	Month = vars[1];
-	Day = StringToInt(vars[2]);
-	Hours = StringToInt(vars[3]);
-	Minutes = StringToInt(vars[4]);
-	Seconds = StringToInt(vars[5]);
-	Year = StringToInt(vars[6]);
-	#else
-
-	#endif
+// 	#endif
+// 
+// 	#ifdef WRENCH_WINDOWS
+// 	char* nCount = ctime(&_time);
+// 
+// 	char* vars[7];
+// 
+// 	int i = 0;
+// 	char * pch = strtok(nCount," :");
+// 	while ( pch != NULL)
+// 	{
+// 		vars[i] = pch;
+// 		++i;
+// 		pch = strtok(NULL," :");
+// 	}
+// 	Month = vars[1];
+// 	Day = StringToInt(vars[2]);
+// 	Hours = StringToInt(vars[3]);
+// 	Minutes = StringToInt(vars[4]);
+// 	Seconds = StringToInt(vars[5]);
+// 	Year = StringToInt(vars[6]);
+// 	#else
+// 
+// 	#endif
 }
 }

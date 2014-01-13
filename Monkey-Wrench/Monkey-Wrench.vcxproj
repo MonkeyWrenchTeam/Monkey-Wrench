@@ -96,6 +96,7 @@
     <ClInclude Include="Wrench_Logging.h" />
     <ClInclude Include="Wrench_Manipulation.h" />
     <ClInclude Include="Wrench_Memory.h" />
+    <ClInclude Include="Wrench_Metamap.h" />
     <ClInclude Include="Wrench_Net.h" />
     <ClInclude Include="Wrench_Shellcode.h" />
     <ClInclude Include="Wrench_Thread.h" />

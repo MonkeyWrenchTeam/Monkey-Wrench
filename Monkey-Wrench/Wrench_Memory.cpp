@@ -54,9 +54,9 @@ namespace Wrench
 		ReadProcessMemory(hProc, (LPVOID)Pointer, &Buffer, sizeof(Buffer), NULL);
 
 		WThread nt;
-		void** arglist = new void*[3];
+		WPVOID* arglist = new WPVOID[3];
 		arglist [0] = Window;
-		arglist [1] = (void*)Pointer;
+		arglist [1] = (WPVOID)Pointer;
 		arglist [2] = Buffer;
 
 		nt = MakeThread(__FMR, arglist);

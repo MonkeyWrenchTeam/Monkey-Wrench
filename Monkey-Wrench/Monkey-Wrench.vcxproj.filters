@@ -55,6 +55,9 @@
     <Filter Include="Header Files\Wrench_Manipulation">
       <UniqueIdentifier>{e9362195-8131-4a4e-9ff2-4c4f527b8171}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Wrench_Storage">
+      <UniqueIdentifier>{7b44cb71-5219-41a7-b613-00c028b4eac9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Wrench.cpp">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="Wrench_Net.h">
       <Filter>Header Files\Wrench_Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench_Metamap.h">
+      <Filter>Header Files\Wrench_Storage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

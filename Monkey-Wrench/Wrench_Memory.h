@@ -88,11 +88,15 @@ namespace Wrench
 		{
 			if(!bLocked) 
 			{
+				if(size == sizeof(mem))
+					sized = false;
+				else
+					sized = true;
+
 				emptied = false;
 				referenced = false;
-				bmem = new T[size];
+				bmem = new T[size + 1];
 				memcpy(bmem, mem, sizeof(mem));
-				sized = true;
 			}
 		}
 
@@ -115,7 +119,7 @@ namespace Wrench
 			lifet = c.GetTimeMilliseconds() + life;
 			vol = true;
 		}
-		inline mem_sPointer& operator= (T mem) {bmem = mem;}
+		inline mem_sPointer& operator= (T mem) {if(!bLocked){bmem = mem};}
 
 		template<typename C>
 		inline C Get()	
@@ -131,10 +135,6 @@ namespace Wrench
 				return NULL;
 			}
 		}
-		//inline bool Compare(mem_sPointer second) {return bmem == second.Get<void*>();}
-		//inline bool Compare(mem_sPointer first, mem_sPointer second) {return first.Get<void*>() == second.Get<void*>();}
-		//inline bool Compare(void* first, mem_sPointer second) {return first == second.Get<void*>();}
-		//inline bool Compare(mem_sPointer first, void* second) {return first.Get<void*>() == second;}
 
 	private:
 		int lifet;

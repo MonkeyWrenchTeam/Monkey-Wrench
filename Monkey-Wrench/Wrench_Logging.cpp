@@ -3,12 +3,12 @@
 
 namespace Wrench
 {
-	void Print( char* message )
+	void Print( WString message )
 	{
 		std::cout << message;
 	}
 
-	void Print( char* message, COL color )
+	void Print( WString message, COL color )
 	{
 	#ifdef WRENCH_WINDOWS
 		HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -22,7 +22,7 @@ namespace Wrench
 	}
 
 
-	void Print( char* message, COL foreground, COL background )
+	void Print( WString message, COL foreground, COL background )
 	{
 	#ifdef WRENCH_WINDOWS
 		HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -36,7 +36,7 @@ namespace Wrench
 	}
 
 
-	void Printfile( char* message, bool truncate, char* path )
+	void Printfile( WString message, bool truncate, char* path )
 	{
         #ifdef WRENCH_WINDOWS
             int flags;
@@ -56,7 +56,7 @@ namespace Wrench
 
 	}
 
-	void Printfile( char* message, int placement, char* ix, bool truncate, char* path )
+	void Printfile( WString message, int placement, WString ix, bool truncate, WString path )
 	{
         #ifdef WRENCH_WINDOWS
             int flags;
@@ -85,7 +85,7 @@ namespace Wrench
 
 	}
 
-	void Printfile( char* message, char* prefix, char* suffix, bool truncate, char* path )
+	void Printfile( WString message, WString prefix, WString suffix, bool truncate, WString path )
 	{
         #ifdef WRENCH_WINDOWS
             int flags;

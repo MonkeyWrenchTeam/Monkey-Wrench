@@ -5,32 +5,32 @@ class WRENCHLIB_API MetaMap
 {
 	public:
 		MetaMap() {};
-		inline void push_newmap(A outter, B inner, C result) 
+		inline void push_newmap(A outer, B inner, C result) 
 		{
 			std::map<B, C> s;
 			s[inner] = result;
-			mmap[outter] = s;
+			mmap[outer] = s;
 		}
-		inline void push_subvar(A outter, B inner, C result)
+		inline void push_subvar(A outer, B inner, C result)
 		{
-			mmap[outter][inner] = result;
-		}
-
-		inline std::map<B, C> get(A outter)
-		{
-			return mmap[outter];
+			mmap[outer][inner] = result;
 		}
 
-		inline C get(A outter, B inner)
+		inline std::map<B, C> get(A outer)
 		{
-			return mmap[outter][inner];
+			return mmap[outer];
 		}
 
-		inline std::map<B, C> search_master(A outter)
+		inline C get(A outer, B inner)
 		{
-			if(mmap.find(outter) != mmap.end())
+			return mmap[outer][inner];
+		}
+
+		inline std::map<B, C> search_master(A outer)
+		{
+			if(mmap.find(outer) != mmap.end())
 			{
-				return mmap[outter];
+				return mmap[outer];
 			}
 			else
 			{

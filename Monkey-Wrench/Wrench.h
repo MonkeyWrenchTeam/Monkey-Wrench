@@ -37,7 +37,7 @@
 typedef void WVOID;
 typedef void* WPVOID;
 typedef unsigned int WUint;
-typedef std::string WString
+typedef std::string WString;
 
 #define WRENCH_DEFS
 #endif

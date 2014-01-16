@@ -82,7 +82,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Wrench.cpp" />
     <ClCompile Include="Wrench_Logging.cpp" />
     <ClCompile Include="Wrench_Manipulation.cpp" />
     <ClCompile Include="Wrench_Memory.cpp" />

@@ -60,9 +60,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Wrench.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Wrench_Timer.cpp">
       <Filter>Source Files\Wrench_Time</Filter>
     </ClCompile>

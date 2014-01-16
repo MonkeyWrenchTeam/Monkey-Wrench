@@ -5,7 +5,7 @@ namespace Wrench
 {
 	void Print( WString message )
 	{
-		std::cout << message;
+		std::cout << message.c_str();
 	}
 
 	void Print( WString message, COL color )
@@ -13,11 +13,11 @@ namespace Wrench
 	#ifdef WRENCH_WINDOWS
 		HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute( han, color );
-		std::cout << message;
+		std::cout << message.c_str();
 		SetConsoleTextAttribute( han, 0x07);
     #else
         //Linux
-        std::cout << "\033[0" << color << "m " << message;
+        std::cout << "\033[0" << color << "m " << message.c_str();
     #endif
 	}
 
@@ -27,11 +27,11 @@ namespace Wrench
 	#ifdef WRENCH_WINDOWS
 		HANDLE han = GetStdHandle(STD_OUTPUT_HANDLE);
 		SetConsoleTextAttribute( han, foreground + background);
-			std::cout << message;
+			std::cout << message.c_str();
 		SetConsoleTextAttribute( han, 0x07);
     #else
         //Linux
-        std::cout << "\033[0" << foreground << ";" << background << "m " << message;
+        std::cout << "\033[0" << foreground << ";" << background << "m " << message.c_str();
     #endif
 	}
 
@@ -52,7 +52,7 @@ namespace Wrench
 
             std::ofstream fs;
             fs.open(path, flags);
-            fs << message << std::endl;
+            fs << message.c_str() << std::endl;
 
 	}
 
@@ -76,10 +76,10 @@ namespace Wrench
 		switch(placement)
 		{
 			case Wrench::PLACEMENT_PREFIX:
-				fs << ix << message << std::endl;
+				fs << ix.c_str() << message.c_str() << std::endl;
 				break;
 			case Wrench::PLACEMENT_SUFFIX:
-				fs << message << ix << std::endl;
+				fs << message.c_str() << ix.c_str() << std::endl;
 				break;
 		}
 
@@ -101,7 +101,7 @@ namespace Wrench
 
         std::ofstream fs;
         fs.open(path, flags);
-		fs << prefix << message << suffix << std::endl;
+		fs << prefix.c_str() << message.c_str() << suffix.c_str() << std::endl;
 	}
 
 

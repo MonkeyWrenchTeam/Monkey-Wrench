@@ -3,35 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrench", "Monkey-Wrench\Monkey-Wrench.vcxproj", "{774A7312-D434-465F-94E8-C3D3C52CC444}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Wrench-Lexicon", "Wrench-Lexicon\Wrench-Lexicon.vcxproj", "{FFF6CD87-F38E-400D-A776-56941BB447BA}"
-	ProjectSection(ProjectDependencies) = postProject
-		{774A7312-D434-465F-94E8-C3D3C52CC444} = {774A7312-D434-465F-94E8-C3D3C52CC444}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
-		Lexicon_Lua-Debug|Win32 = Lexicon_Lua-Debug|Win32
-		Lexicon_Lua-Release|Win32 = Lexicon_Lua-Release|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{774A7312-D434-465F-94E8-C3D3C52CC444}.Debug|Win32.ActiveCfg = Debug|Win32
 		{774A7312-D434-465F-94E8-C3D3C52CC444}.Debug|Win32.Build.0 = Debug|Win32
-		{774A7312-D434-465F-94E8-C3D3C52CC444}.Lexicon_Lua-Debug|Win32.ActiveCfg = Release|Win32
-		{774A7312-D434-465F-94E8-C3D3C52CC444}.Lexicon_Lua-Debug|Win32.Build.0 = Release|Win32
-		{774A7312-D434-465F-94E8-C3D3C52CC444}.Lexicon_Lua-Release|Win32.ActiveCfg = Release|Win32
-		{774A7312-D434-465F-94E8-C3D3C52CC444}.Lexicon_Lua-Release|Win32.Build.0 = Release|Win32
 		{774A7312-D434-465F-94E8-C3D3C52CC444}.Release|Win32.ActiveCfg = Release|Win32
 		{774A7312-D434-465F-94E8-C3D3C52CC444}.Release|Win32.Build.0 = Release|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Debug|Win32.ActiveCfg = Debug|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Debug|Win32.Build.0 = Debug|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Lexicon_Lua-Debug|Win32.ActiveCfg = Lexicon_Lua-Debug|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Lexicon_Lua-Debug|Win32.Build.0 = Lexicon_Lua-Debug|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Lexicon_Lua-Release|Win32.ActiveCfg = Lexicon_Lua-Release|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Lexicon_Lua-Release|Win32.Build.0 = Lexicon_Lua-Release|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Release|Win32.ActiveCfg = Release|Win32
-		{FFF6CD87-F38E-400D-A776-56941BB447BA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,1 +1,8 @@
 /.project
+*.obj
+*.tlog
+*.log
+*.lastbuildstate
+*.manifest
+*.cache
+*.pdb

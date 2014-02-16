@@ -1,6 +1,0 @@
-Monkey-Wrench Lexicon is using a vanilla build of Lua 5.2.3
-Please see Lua's licensing for more details.
-Lua's documentation and more can be found at their site: http://www.lua.org/
-The Monkey-Wrench team holds no legal claim to the Lua programming language.
-This extension is merely here to assist developers in the integration of Lua into their applications and projects.
-Nor do we hold any legal claim to any and all damages that may result from misuse or standard usage of Lua.

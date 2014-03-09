@@ -5,7 +5,6 @@
 #include <iostream>
 
 #if defined(_WIN32) || defined(__WIN32__) || defined(__WINDOWS__) //Take advantage of Window's native features.
-	#include <Windows.h>
 	#define WRENCH_WINDOWS
 #else
 	#define WRENCH_POSIX

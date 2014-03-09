@@ -1,5 +1,6 @@
 #include "Wrench_Logging.h"
 #include <fstream>
+#include <Windows.h>
 
 namespace Wrench
 {

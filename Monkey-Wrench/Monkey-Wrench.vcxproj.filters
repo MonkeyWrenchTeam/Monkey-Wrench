@@ -110,5 +110,11 @@
     <ClInclude Include="Wrench_Metamap.h">
       <Filter>Header Files\Wrench_Storage</Filter>
     </ClInclude>
+    <ClInclude Include="Wrench_AbstractTree.h">
+      <Filter>Header Files\Wrench_Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrench_Node.h">
+      <Filter>Header Files\Wrench_Storage</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

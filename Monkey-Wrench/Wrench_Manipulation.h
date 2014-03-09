@@ -1,9 +1,6 @@
 #ifndef WRENCH_MANIPULATION
 #define WRENCH_MANIPULATION
 #include "Wrench.h"
-#include <map>
-#include <string>
-#include <sstream>
 
 namespace Wrench
 {

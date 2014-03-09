@@ -1,14 +1,10 @@
 #ifndef WRENCH_LOGGING
 #define WRENCH_LOGGING
 
-#ifdef WRENCH_WINDOWS
-#include <Windows.h>
-#endif
-
 #include "Wrench.h"
 
 #ifdef WRENCH_WINDOWS
-    #define COL WORD
+    #define COL unsigned short
 #else
     #define COL char*
 #endif

@@ -8,6 +8,10 @@
     #include <math.h>
 #endif
 
+#ifdef WRENCH_WINDOWS
+#include <stdarg.h>
+#endif
+
 namespace Wrench
 {
 

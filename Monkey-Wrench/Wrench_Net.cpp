@@ -5,6 +5,8 @@
 
 
 
+
+
 	SOCKET* _CTSP( SOCKET _t )
 	{
 		SOCKET* _ta = new SOCKET[sizeof(_t) + 1];

@@ -1,4 +1,5 @@
 #include "Wrench_Shellcode.h"
+#include <Windows.h>
 
 namespace Wrench
 {
@@ -6,7 +7,7 @@ namespace Wrench
 	WVOID ExecuteShellcode( char* sc )
 	{
 		void (*scv)();
-		scv = (void (*)())(PVOID)sc;
+		scv = (void (*)())(WPVOID)sc;
 		VirtualAlloc(sc, sizeof(sc), MEM_COMMIT | MEM_RESERVE, 0);
 
 		DWORD old;

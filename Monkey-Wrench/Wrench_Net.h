@@ -31,9 +31,6 @@ namespace Wrench
 #define WRENCHNET_BUFFER 2048
 #define WRENCHNET_FAILURE "204.204.204.204"
 
-
-
-
 	struct WRENCHLIB_API WConnectionInformation
 	{
 		sockaddr_in sockAddr;

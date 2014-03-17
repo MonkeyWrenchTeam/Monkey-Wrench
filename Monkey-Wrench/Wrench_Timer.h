@@ -21,12 +21,7 @@ public:
 
 private:
 	time_t _time;
-
-    //In the Windows version, the month is represented as the name of the month.
-    //However, using POSIX, localtime gives the number of the month (1-12)
-    
-        int Month;
-	
+    int Month;
 	int Year;
 	int Seconds;
 	int Minutes;

@@ -6,3 +6,4 @@
 *.manifest
 *.cache
 *.pdb
+*.ipch

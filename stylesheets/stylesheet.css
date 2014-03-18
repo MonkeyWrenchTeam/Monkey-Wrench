@@ -43,6 +43,29 @@ header {
   margin: 0 0 40px 0;
 }
 
+.moduleholder {
+	border: 1px dashed #b5e853;
+	margin-bottom: 20px;
+	width:600px;
+	height:900px;
+	position:absolute;
+	
+}
+
+.modimage {
+	border: 2px dashed #b5e853;
+	margin-left: 25px; 
+	padding-bottom: -5px; 
+	padding-top:5px;
+	position: absolute;
+}
+
+.moddesc {
+	margin-left: 120px;
+	text-align:justify;
+text-justify:inter-word;
+}
+
 header h1 {
   font-size: 30px;
   line-height: 1.5;
